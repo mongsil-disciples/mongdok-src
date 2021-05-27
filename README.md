@@ -1,4 +1,6 @@
-![몽실이네독서실](./docs/0_images/brand.png)
+
+
+<center><img src="./docs/0_images/brand.png"></center>
 
 # 몽실이네 독서실(MongDok)
 
@@ -276,4 +278,6 @@
 
 <br>
 
-![몽실이](./docs/0_images/몽실이_투명.png)
+<center><img src="./docs/0_images/몽실이_투명.png"></center>
+
+
