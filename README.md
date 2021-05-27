@@ -1,6 +1,6 @@
 
 
-<center><img src="./docs/0_images/brand.png"></center>
+<p align="center"><img src="./docs/0_images/brand.png"></p>
 
 # 몽실이네 독서실(MongDok)
 
@@ -278,6 +278,6 @@
 
 <br>
 
-<center><img src="./docs/0_images/몽실이_투명.png"></center>
+<p align="center"><img src="./docs/0_images/몽실이_투명.png"></p>
 
 
