@@ -160,59 +160,25 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      absolX: 50,
+      absolY: 20,
+      face: undefined,
+    };
   },
   //lifecycle area
   mounted() {
-    // window.addEventListener('mousemove', this.following);
+    this.face = document.querySelector('#face');
+    window.addEventListener('mousemove', this.following);
   },
   beforeDestroy() {
-    // window.removeEventListener('mousemove', this.following);
+    window.removeEventListener('mousemove', this.following);
   },
   methods: {
     following: function(event) {
-      const face = document.querySelector('#face');
-
-      // const faceRect = face.getBoundingClientRect();
-      // console.log(faceRect);
-
-      var x = (event.clientX * 100) / window.innerWidth;
-      var y = (event.clientY * 100) / window.innerHeight;
-
-      var midX = 50,
-        midY = 20;
-
-      var resX, resY;
-
-      // resX = midX - x;
-      // resY = y - midY;
-
-      // console.log(resX, resY);
-
-      if (x < midX && y < midY) {
-        // 1사분면
-        resX = x;
-        resY = -y;
-      } else if (x > midX && y < midY) {
-        // 2사분면
-        resX = x;
-        resY = y;
-        // console.log('2사분면 : ', resX, resY);
-      } else if (x < midX && y > midY) {
-        //3사분면
-        //   console.log('3사분면');
-        // resX = -Math.abs(resX);
-        // resY = -Math.abs(resY);
-      } else if (x > midX && y > midY) {
-        // 4사분면
-        resX = -Math.abs(midX - x);
-        resY = Math.abs(midY - y);
-        // console.log('4사분면 : ', resX, resY);
-        // resY = Math.abs(resY);
-      }
-
-      const value = `rotate3d(${resX}, ${resY}, 0, 1rad)`;
-      face.style.transform = value;
+      const x = (event.clientX * 100) / window.innerWidth;
+      const y = (event.clientY * 100) / window.innerHeight;
+      this.face.style.transform = `rotate3d(${this.absolY - y}, ${-(this.absolX - x)}, 0, 1rad)`;
     },
   },
 };
