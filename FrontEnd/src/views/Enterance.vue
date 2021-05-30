@@ -71,7 +71,6 @@ export default {
       //가이드가 이미 보여졌는지 체크
       checkGuideShown() {
          const temp = localStorage.getItem('GuideShown');
-         console.log(temp);
          if (temp == null) {
             // 가이드가 출력된 적이 없으면, 보여주기
             this.isOpenGuide = true;
