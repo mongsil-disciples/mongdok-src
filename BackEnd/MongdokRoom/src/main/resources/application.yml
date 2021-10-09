@@ -1,0 +1,21 @@
+server:
+  port: 8085
+  ssl:
+    enabled: true
+    key-store: classpath:keystore.p12
+    key-store-password: mongdok401!
+    key-store-type: PKCS12
+
+
+spring:
+  redis:
+    host: k4a401.p.ssafy.io
+    port: 6388
+    password: SSmongdokAF401Y
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: mongdok_admin
+    url: jdbc:mariadb://k4a401.p.ssafy.io:3306/mongdok_db?characterEncoding=UTF-8&serverTimezone=UTC
+    password: mongdok401!
+  jwt:
+    secret: MONGDOK-TOKEN-12345678901234567890123456789012345678901234567890123456789012345678901234567890
